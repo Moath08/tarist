@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tari Demo</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary-blue: #1A2B43;
+            --color-accent-gold: #FDB944;
+            --color-cream: #FDFCF5;
+            --color-sand: #F5E6CA;
+            --color-text-dark: #1A2B43;
+            --color-text-light: #FFFFFF;
+            --color-input-bg: rgba(255, 255, 255, 0.9);
+
+            --gradient-bg: radial-gradient(circle at top left, #2C4A70, #1A2B43);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --backdrop-blur: blur(12px);
+
+            --font-family-base: 'Inter', system-ui, sans-serif;
+            --font-family-header: 'Outfit', sans-serif;
+
+            --border-radius-lg: 24px;
+            --border-radius-md: 16px;
+            --border-radius-sm: 12px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            background: var(--gradient-bg);
+            color: var(--color-text-light);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            padding: 20px 0;
+        }
+
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-family-header);
+            font-size: 1.5rem;
+            color: var(--color-accent-gold);
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            margin-left: 24px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Hero */
+        .hero-section {
+            text-align: center;
+            padding: 80px 0 120px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-accent-gold), #e0a330);
+            color: var(--color-primary-blue);
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Value Props */
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: -60px;
+        }
+
+        .prop-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--backdrop-blur);
+            border: var(--glass-border);
+            padding: 32px;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--glass-shadow);
+            text-align: center;
+        }
+
+        .prop-card h3 {
+            color: var(--color-accent-gold);
+            margin-bottom: 12px;
+        }
+
+        .prop-card p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">TARI</div>
+            <div class="nav-links">
+                <a href="#">Explore</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Experience Egypt, Your Way</h1>
+            <p class="hero-subtitle">
+                Personalized journeys for visitors and locals
+            </p>
+            <button class="btn-primary">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Value Props -->
+    <section class="container value-props">
+        <div class="prop-card">
+            <h3>Smart Planning</h3>
+            <p>Tailored experiences built around your interests.</p>
+        </div>
+        <div class="prop-card">
+            <h3>Local Insight</h3>
+            <p>Discover places beyond tourist paths.</p>
+        </div>
+        <div class="prop-card">
+            <h3>Real-Time Help</h3>
+            <p>Your AI companion wherever you go.</p>
+        </div>
+    </section>
+
+</body>
+</html>
